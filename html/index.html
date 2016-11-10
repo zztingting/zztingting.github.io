@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>zting个人博客 - 一个web女前端的学习之路</title>
+		<meta name="keywords" content="个人博客,个人博客,个人博客模板" />
+		<meta name="description" content="个人博客，是一个站在web前端设计学习之路的女程序员个人网站." />
+		<link href="../css/1.css" rel="stylesheet">
+		<link href="../css/2.css" rel="stylesheet">
+		
+		<style type="text/css">
+		 body{background-color:rgba(85,170,153,.2); }
+		 .container{
+			width: 960px;
+			margin: 0px auto;
+			position: relative; 
+        }
+		.scrubber{
+			width: 55px;
+			min-height: 200px ; 
+			position: absolute;
+			top: 29px;
+			left: 0px;
+			z-index: 999;
+			background: rgba(255,255,255,.9);
+		}
+		.scrubber a{
+			/* 让a标签不在一行显示 */
+			display: block;
+			height: 26px;
+			line-height:26px;
+			font-size: 12px;
+			border-right-color: rgba(200,200,200,.5); 
+			padding-right: 5px;
+			color: #a5a5a5;text-decoration: none;
+			/* 文字阴影 */
+			text-shadow: 0 1px 1px  rgba(0,0,0,.3);
+			/* 文本靠右 */
+			text-align: right;
+		}
+		
+		.scrubber a.current{
+			border-right-color: #7ebad0;
+			
+			font-weight: bold;
+		}
+		.scrubber a:hover{color:#7ebad0; text-decoration: underline;}
+		.scrubber a.current:hover{text-decoration: none;}
+
+		.content{
+			min-height: 1000px;
+			background: url(../imgs/line.png) repeat-y 121px 0;
+			padding-top: 50px;
+			padding-left: 160px;
+			position: relative;
+		}
+
+		    .content_year,
+    		.content_month{
+				height: 30px;line-height: 30px;color: #a5a5a5;
+				text-shadow: 0 1px 1px rgba(0,0,0,.3);
+				font-size: 14px;
+				font-weight: bold;
+				position: relative;left: -90px;
+				clear: both;
+
+    		}
+    		.content_item{
+    			width: 370px;
+    			min-height: 300px;
+    			background: #fff;border-radius: 4px;
+    			margin: 20px 30px 0px 0px;
+    			position: relative;
+    			color: #888;
+
+    		}
+    		/* 小三角图标 */
+    		.content_item_icon_arrow{
+    			position: absolute;left: -10px;top: 20px;
+    			height: 0px;
+    			border-color: transparent #fff transparent transparent;
+    			border-width: 10px 10px 10px 0px;
+    			border-style: dashed solid dashed dashed;
+    		}
+    		/* 小圆点 */
+    		.content_item_icon_dot{
+    			width: 11px;height: 11px;
+    			border-radius: 11px;
+    			background-color: #fff;
+    			position: absolute;
+    			left: -43px;top: 25px;
+    		}
+    		/* 小圆点 */
+    		.content_item_icon_dot_child{
+    			width: 7px;height: 7px;
+    			border-radius: 7px;
+    			background-color: #b3dae9;
+    			position: absolute;
+    			left: 2px;top: 2px;
+    		}
+    		.content_item_head{
+    			padding: 15px;
+    			padding-bottom: 0px;
+
+    		}
+    		.content_item_head_title{
+    			height: 46px;line-height: 46px;font-size: 28px;
+    			padding: 0px 0px 10px 56px;
+    			position: relative;
+
+    		}
+    		/* 农历日期 */
+    		.content_item_head_title_lunar{
+    			width: 46px;height: 46px;background: #b3dae9;border-radius: 8px;
+    			position: absolute;left: 0px;top: 0px;
+    			overflow: hidden;
+    			color: #fff;
+    			font-size: 25px;
+    			line-height: 23px;
+    		}
+    		.content_item_head_intro{
+    			font-size: 14px;
+    			line-height: 22px;
+    			padding: 0px 15px;
+    			margin-bottom: 10px;
+
+    		}
+    		.content_item_media{}
+    		.content_item_footer{}
+    		.ui_icon{
+    			width: 15px;height: 15px;display: inline-block;
+    			background-repeat: no-repeat;
+    			font-size: 0px;
+    			overflow: hidden;
+    			background-image: url(../imgs/right_quote_24.png);
+    			margin-right: 5px;
+    			vertical-align: bottom;
+    		}
+    		.quote_before{
+    			background-position: -986px -102px;
+    		}
+    		.quote_after{
+    			background-position: -986px -85px;
+    		}</style>
+</head>
+<body>
+ <header>
+		  <div id="logo"><a href="/"></a></div>
+		  <nav class="topnav" id="topnav">
+		  <a href="/"><span>首页</span><span class="en">Protal</span></a>
+		  <a href="/news/"><span>慢生活</span><span class="en">Life</span></a>
+		  <a href="/newstalk/"><span>乡情</span><span class="en">Doing</span></a>
+		  <a href="/jstt/"><span>学无止境</span><span class="en">Learn</span></a>
+		  <a href="/e/tool/gbook/?bid=1"><span>留言版</span><span class="en">Guestbook</span></a></nav>
+</header>
+<div class="banner">
+  <section class="box">
+    <ul class="texts">
+      <p>我们要有，</p>
+      <p>最朴素的生活和最遥远的梦，</p>
+      <p>即使天寒地冻路遥马亡。</p>
+    </ul>
+    <div class="avatar"><a href="about.html"><span>Zting</span></a> </div>
+  </section>
+</div>
+      <div class="container">
+    	<div class="scrubber">
+    		<a href="javascript:;" class="scrubber_year current">首页</a>
+    		<a href="javascript:;" class="scrubber_month current">11月</a>
+    		<a href="javascript:;" class="scrubber_year current">10月</a>
+    	</div>
+    	<div class="content">
+    		<div class="content_year">2016年</div>
+    		<div class="content_month">11月</div>
+    		<div class="content_item">
+    			<div class="content_item_icon_arrow"></div>
+    			<div class="content_item_icon_dot"></div>
+    			<div class="content_item_icon_child"></div>
+    			<div class="content_item_head">
+    				<div class="content_item_head_title">
+    			      <div class="content_item_head_title_lunar">三<br>&nbsp;十
+    			       </div>
+    			      2016-11-10
+    			 </div>
+    			 <div class="content_item_head_intro">
+    			 <i class="ui_icon quote_before"></i>
+    			 我们要有，最朴素的生活和最遥远的梦，即使天寒地冻路遥马亡。<i class="ui_icon quote_after"></i>
+    			 </div>
+
+    		  </div>
+    		  <div class="content_item_media">
+    			<img src="../imgs/bbh.jpg"  width="370">
+    		</div>
+    		
+    		<div class="content_item_footer"></div>
+    	</div>
+    		</div>
+    		
+    </div>
+	</body>
+</html>
